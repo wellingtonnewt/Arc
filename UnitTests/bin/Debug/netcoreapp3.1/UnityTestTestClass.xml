@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<SongData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Tags>
+    <string>Tag1</string>
+    <string>Tag2</string>
+  </Tags>
+  <Lyric>
+    <SongLyric>
+      <Type>Chorus</Type>
+      <Text>ChorusLalalal</Text>
+    </SongLyric>
+    <SongLyric>
+      <Type>Bridge</Type>
+      <Text>BridgeLalalal</Text>
+    </SongLyric>
+    <SongLyric>
+      <Type>Stanza</Type>
+      <Text>StanzaLalalal</Text>
+    </SongLyric>
+  </Lyric>
+  <Title>test</Title>
+  <Author>testAuthor</Author>
+</SongData>
