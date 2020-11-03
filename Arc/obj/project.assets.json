@@ -8,19 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\nneer\\.nuget\\packages\\": {}
+    "C:\\Users\\c.stockinger\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Github\\Software Tool\\Arc\\Arc\\Arc.csproj",
+      "projectUniqueName": "E:\\External\\csharp\\Arc\\Arc\\Arc.csproj",
       "projectName": "Arc",
-      "projectPath": "D:\\Github\\Software Tool\\Arc\\Arc\\Arc.csproj",
-      "packagesPath": "C:\\Users\\nneer\\.nuget\\packages\\",
-      "outputPath": "D:\\Github\\Software Tool\\Arc\\Arc\\obj\\",
+      "projectPath": "E:\\External\\csharp\\Arc\\Arc\\Arc.csproj",
+      "packagesPath": "C:\\Users\\c.stockinger\\.nuget\\packages\\",
+      "outputPath": "E:\\External\\csharp\\Arc\\Arc\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\nneer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\c.stockinger\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,6 +32,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://teamcity.intence.de:8082/httpAuth/app/nuget/v1/FeedService.svc/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

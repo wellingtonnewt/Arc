@@ -17,3 +17,22 @@ D:\Github\Software Tool\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.csproj.CoreCompileIn
 D:\Github\Software Tool\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.dll
 D:\Github\Software Tool\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.pdb
 D:\Github\Software Tool\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.genruntimeconfig.cache
+E:\External\csharp\Arc\Arc\bin\Debug\netcoreapp3.1\Arc.exe
+E:\External\csharp\Arc\Arc\bin\Debug\netcoreapp3.1\Arc.deps.json
+E:\External\csharp\Arc\Arc\bin\Debug\netcoreapp3.1\Arc.runtimeconfig.json
+E:\External\csharp\Arc\Arc\bin\Debug\netcoreapp3.1\Arc.runtimeconfig.dev.json
+E:\External\csharp\Arc\Arc\bin\Debug\netcoreapp3.1\Arc.dll
+E:\External\csharp\Arc\Arc\bin\Debug\netcoreapp3.1\Arc.pdb
+E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.csprojAssemblyReference.cache
+E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\App.g.cs
+E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\Arc_MarkupCompile.cache
+E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\Arc_MarkupCompile.lref
+E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\MainWindow.baml
+E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.g.resources
+E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.AssemblyInfoInputs.cache
+E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.AssemblyInfo.cs
+E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.csproj.CoreCompileInputs.cache
+E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.dll
+E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.pdb
+E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.genruntimeconfig.cache
