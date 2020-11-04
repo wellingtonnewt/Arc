@@ -36,3 +36,5 @@ E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.csproj.CoreCompileInputs.
 E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.dll
 E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.pdb
 E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.genruntimeconfig.cache
+E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\UserControls\SongLibrary.g.cs
+E:\External\csharp\Arc\Arc\obj\Debug\netcoreapp3.1\UserControls\SongLibrary.baml
