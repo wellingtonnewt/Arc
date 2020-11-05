@@ -18,6 +18,7 @@ namespace Arc
             MenuItemMethod();
             InitializeComponent();
         }
+
         void MenuItemMethod()
         {
             MenuItems = new List<MainMenuItem>();
