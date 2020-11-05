@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\nneer\\.nuget\\packages\\": {}
+    "C:\\Users\\GamingPc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Github\\Software Tool\\Arc\\Arc\\Arc.csproj",
+      "projectUniqueName": "D:\\Projekte\\WPF\\Arc\\Arc\\Arc.csproj",
       "projectName": "Arc",
-      "projectPath": "D:\\Github\\Software Tool\\Arc\\Arc\\Arc.csproj",
-      "packagesPath": "C:\\Users\\nneer\\.nuget\\packages\\",
-      "outputPath": "D:\\Github\\Software Tool\\Arc\\Arc\\obj\\",
+      "projectPath": "D:\\Projekte\\WPF\\Arc\\Arc\\Arc.csproj",
+      "packagesPath": "C:\\Users\\GamingPc\\.nuget\\packages\\",
+      "outputPath": "D:\\Projekte\\WPF\\Arc\\Arc\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nneer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\GamingPc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

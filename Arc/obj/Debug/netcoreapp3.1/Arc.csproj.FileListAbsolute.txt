@@ -17,3 +17,24 @@ D:\Github\Software Tool\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.csproj.CoreCompileIn
 D:\Github\Software Tool\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.dll
 D:\Github\Software Tool\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.pdb
 D:\Github\Software Tool\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.genruntimeconfig.cache
+D:\Projekte\WPF\Arc\Arc\bin\Debug\netcoreapp3.1\Arc.exe
+D:\Projekte\WPF\Arc\Arc\bin\Debug\netcoreapp3.1\Arc.deps.json
+D:\Projekte\WPF\Arc\Arc\bin\Debug\netcoreapp3.1\Arc.runtimeconfig.json
+D:\Projekte\WPF\Arc\Arc\bin\Debug\netcoreapp3.1\Arc.runtimeconfig.dev.json
+D:\Projekte\WPF\Arc\Arc\bin\Debug\netcoreapp3.1\Arc.dll
+D:\Projekte\WPF\Arc\Arc\bin\Debug\netcoreapp3.1\Arc.pdb
+D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\App.g.cs
+D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\Arc_MarkupCompile.cache
+D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\Arc_MarkupCompile.lref
+D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\MainWindow.baml
+D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.g.resources
+D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.AssemblyInfoInputs.cache
+D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.AssemblyInfo.cs
+D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.csproj.CoreCompileInputs.cache
+D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.dll
+D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.pdb
+D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.genruntimeconfig.cache
+D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.csprojAssemblyReference.cache
+D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\UserControls\SongLibrary.g.cs
+D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\UserControls\SongLibrary.baml
