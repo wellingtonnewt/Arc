@@ -38,3 +38,5 @@ D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.genruntimeconfig.cache
 D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.csprojAssemblyReference.cache
 D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\UserControls\SongLibrary.g.cs
 D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\UserControls\SongLibrary.baml
+D:\Github\Software Tool\Arc\Arc\obj\Debug\netcoreapp3.1\UserControls\SongLibrary.g.cs
+D:\Github\Software Tool\Arc\Arc\obj\Debug\netcoreapp3.1\UserControls\SongLibrary.baml

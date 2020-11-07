@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projekte\\WPF\\Arc\\Arc\\Arc.csproj": {}
+    "D:\\Github\\Software Tool\\Arc\\Arc\\Arc.csproj": {}
   },
   "projects": {
-    "D:\\Projekte\\WPF\\Arc\\Arc\\Arc.csproj": {
+    "D:\\Github\\Software Tool\\Arc\\Arc\\Arc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projekte\\WPF\\Arc\\Arc\\Arc.csproj",
+        "projectUniqueName": "D:\\Github\\Software Tool\\Arc\\Arc\\Arc.csproj",
         "projectName": "Arc",
-        "projectPath": "D:\\Projekte\\WPF\\Arc\\Arc\\Arc.csproj",
-        "packagesPath": "C:\\Users\\GamingPc\\.nuget\\packages\\",
-        "outputPath": "D:\\Projekte\\WPF\\Arc\\Arc\\obj\\",
+        "projectPath": "D:\\Github\\Software Tool\\Arc\\Arc\\Arc.csproj",
+        "packagesPath": "C:\\Users\\nneer\\.nuget\\packages\\",
+        "outputPath": "D:\\Github\\Software Tool\\Arc\\Arc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\GamingPc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nneer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

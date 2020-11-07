@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\
+D:\Github\Software Tool\Arc\Arc\obj\Debug\netcoreapp3.1\
 Arc
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-D:\Projekte\WPF\Arc\Arc\App.xaml
+D:\Github\Software Tool\Arc\Arc\App.xaml
 22024110782
 
 81511397034
 1921654412462
 MainWindow.xaml;UserControls\SongLibrary.xaml;
 
-True
+False
 
