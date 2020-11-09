@@ -40,7 +40,7 @@
         <!-- Content -->
         <ContentControl Grid.Column="1" 
                         Margin="10,0,0,0"
-                        Content="{Binding ElementName=MainMenu, Path=SelectedItem.Control}"/>
+                        Content="{Binding ElementName=MainMenu, Path=SelectedItem.Control}" Foreground="Black"/>
 
     </Grid>
 </Window>
