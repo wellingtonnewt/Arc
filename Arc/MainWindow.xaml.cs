@@ -1,7 +1,8 @@
 ﻿using Arc.UserControls;
 using System.Collections.Generic;
 using System.Windows;
-
+using System.IO;
+using Arc.Xml;
 
 namespace Arc
 {
@@ -17,6 +18,11 @@ namespace Arc
         {
             MenuItemMethod();
             InitializeComponent();
+
+            SongData songData = new SongData();
+            songData.Title = "test";
+            songData.Author = "Newt Welch";
+            songData.Save("test.xml");
         }
 
         void MenuItemMethod()
@@ -24,7 +30,7 @@ namespace Arc
             MenuItems = new List<MainMenuItem>();
 
             MenuItems.Add(new MainMenuItem("/Resources/Images/Music_White.png", new SongLibrary()));
-
+            MenuItems.Add(new MainMenuItem("/Resources/Images/Music_White.png", new SongLibrary()));
         }
     }
 }

@@ -6,37 +6,36 @@
         xmlns:local="clr-namespace:Arc"
         mc:Ignorable="d"
         DataContext="{Binding RelativeSource={RelativeSource Self}}"
-        Title="ARC" Height="720" Width="1280" Background="#212121">
+        Title="Arc" Height="720" Width="1280" Background="#212121">
     <Grid>
         
         <!-- Gridz -->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="75 "/>
+            <ColumnDefinition Width="60"/>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         
         <!-- Main Menu -->
-        <ListBox Name="MainMenu" 
-                 Grid.Column="0" 
+        <ListBox Name="MainMenu"
+                 Grid.Column="0"
                  Background="#2D2D2D" 
                  BorderBrush="{x:Null}" 
                  Foreground="{x:Null}" 
-                 ItemsSource="{Binding MenuItems}">
+                 ItemsSource="{Binding MenuItems}" 
+                 Padding="0 100 0 0">
 
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    
                     <!-- Song Library -->
                     <Image Source="{Binding IconPath}" 
-                           Margin="5" 
-                           MinWidth="50" 
-                           MinHeight="50"/>
-                    
+                           Margin="5 5 0 5"
+                           MinWidth="35" 
+                           MinHeight="35"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
-            
-        </ListBox> 
-        
+
+        </ListBox>
+
         <!-- Content -->
         <ContentControl Grid.Column="1" 
                         Margin="10,0,0,0"

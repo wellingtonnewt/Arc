@@ -13,9 +13,7 @@ using System.Windows.Shapes;
 
 namespace Arc.UserControls
 {
-    /// <summary>
-    /// Interaction logic for SongLibrary.xaml
-    /// </summary>
+
     public partial class SongLibrary : UserControl
     {
         public SongLibrary()
