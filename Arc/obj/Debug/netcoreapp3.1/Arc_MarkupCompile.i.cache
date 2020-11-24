@@ -1,5 +1,5 @@
 ﻿Arc
-
+1.0.0.0
 
 winexe
 C#
@@ -12,7 +12,7 @@ TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 D:\Github\Software Tool\Arc\Arc\App.xaml
 22024110782
 
-8-1085449316
+101756485130
 1921654412462
 MainWindow.xaml;UserControls\SongLibrary.xaml;
 

@@ -1,6 +1,7 @@
 ﻿using Arc.Xml;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
 
@@ -20,9 +21,15 @@ namespace Arc.ViewModels
             } 
         }
 
+        public ObservableCollection<SongLyric> SongLyrics { get; set; }
+
         public SongLibraryViewModel(SongData songData)
         {
             SongData = songData;
+
+            SongLyrics = new ObservableCollection<SongLyric>();
+            SongLyrics.Add(new SongLyric());
+            SongLyrics.Add(new SongLyric());
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

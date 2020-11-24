@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\chris\\source\\repos\\Arc\\Arc\\Arc.csproj": {}
+    "D:\\Github\\Software Tool\\Arc\\Arc\\Arc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\chris\\source\\repos\\Arc\\Arc\\Arc.csproj": {
+    "D:\\Github\\Software Tool\\Arc\\Arc\\Arc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chris\\source\\repos\\Arc\\Arc\\Arc.csproj",
+        "projectUniqueName": "D:\\Github\\Software Tool\\Arc\\Arc\\Arc.csproj",
         "projectName": "Arc",
-        "projectPath": "C:\\Users\\chris\\source\\repos\\Arc\\Arc\\Arc.csproj",
-        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chris\\source\\repos\\Arc\\Arc\\obj\\",
+        "projectPath": "D:\\Github\\Software Tool\\Arc\\Arc\\Arc.csproj",
+        "packagesPath": "C:\\Users\\nneer\\.nuget\\packages\\",
+        "outputPath": "D:\\Github\\Software Tool\\Arc\\Arc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nneer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\chris\\source\\repos\\Patreon.NET\\Patreon.NET\\bin\\Release": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

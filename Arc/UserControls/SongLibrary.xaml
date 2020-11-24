@@ -7,45 +7,101 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        <!-- Gridz -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-
-        <Border Grid.Column="1" Padding="10">
+        <!-- Song Data Area -->
+        <Border Grid.Column="1" 
+                Padding="100 100 100 0">
             <StackPanel>
-                <Grid Background="Black">
-                    <StackPanel>
-                        <TextBox Text="{Binding SongData.Title}" TextChanged="TextBox_TextChanged"/>
-                        <TextBlock Text="{Binding SongData.Author}" Foreground="White"/>
+                <!-- Top Bit -->
+                <Grid Background="#121212" 
+                      Margin="2">
+                    <!-- Title -->
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBox Text="{Binding SongData.Title}"
+                                 Background="{x:Null}" 
+                                 Foreground="White" 
+                                 BorderBrush="{x:Null}" 
+                                 SelectionBrush="#FF235DDA" 
+                                 SelectionTextBrush="{x:Null}" 
+                                 FontWeight="Bold" FontSize="30" 
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center"
+                                 BorderThickness="0,0,0,0"/>
+                        <!-- Author -->
+                        <TextBox Text="{Binding SongData.Author}" 
+                                 Background="{x:Null}" 
+                                 BorderBrush="{x:Null}" 
+                                 Foreground="White"
+                                 SelectionBrush="#FF235DDA"
+                                 FontSize="15" 
+                                 HorizontalAlignment="Center" 
+                                 VerticalAlignment="Center"
+                                 BorderThickness="0,0,0,0"/>
                     </StackPanel>
+                    
                 </Grid>
-                <Grid Background="Blue" Height="5"/>
-
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button Content="EDIT" Margin="10" Click="ButtonEdit_Click"/>
-                    <Button Content="DISPLAY" Margin="10"/>
+                <Grid Background="#235DDA" Height="5"/>
+                
+                <!-- Center Bit -->
+                <StackPanel Orientation="Horizontal" 
+                            HorizontalAlignment="Center">
+                    <!-- Buttons -->
+                    <Button Content="EDIT" Margin="10"
+                            Click="ButtonEdit_Click"/>
+                    <Button Content="DISPLAY" 
+                            Margin="10"/>
                 </StackPanel>
-
-                <ListBox ItemsSource="{Binding}">
+                
+                <!-- Lyrics -->
+                <ListBox ItemsSource="{Binding SongLyrics}"
+                         BorderBrush="{x:Null}"
+                         Background="{x:Null}"
+                         Foreground="{x:Null}"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Center">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Horizontal" 
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center">
+                                
                                 <Grid Background="White" Width="5"/>
-                                <Grid Background="Black">
-                                    <DockPanel>
-                                        <Button Content="Eye" DockPanel.Dock="Right"/>
-                                        <TextBlock Text="asdf"/>
-                                    </DockPanel>                                    
+                                <Grid Background="#121212" MinHeight="100" MinWidth="383">
+                                    <Grid>
+                                        <TextBox Text="adasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd"
+                                                 Background="{x:Null}" 
+                                                 Foreground="White" 
+                                                 BorderBrush="{x:Null}" 
+                                                 SelectionBrush="#FF235DDA" 
+                                                 SelectionTextBrush="{x:Null}" 
+                                                 FontSize="15"
+                                                 Margin="15 40 0 0"
+                                                 BorderThickness="0,0,0,0"/>
+                                        <Button Content="Eye" 
+                                                HorizontalAlignment="Right"/>
+                                    </Grid>                                    
                                 </Grid>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-
-                <Button Content="Add" HorizontalAlignment="Center"/>
+                
+                <!-- Add Lyrics -->
+                <Button Content="Add" 
+                        HorizontalAlignment="Center"/>
             </StackPanel>
         </Border>        
+        
+        <!-- Song Search Area -->
+        <Border>
+            <StackPanel>
+                
+            </StackPanel>
+        </Border>
     </Grid>
 </UserControl>

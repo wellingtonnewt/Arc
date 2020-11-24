@@ -18,11 +18,12 @@
         <!-- Main Menu -->
         <ListBox Name="MainMenu"
                  Grid.Column="0"
-                 Background="#2D2D2D" 
+                 Background="#FF2D2D2D"   
                  BorderBrush="{x:Null}" 
                  Foreground="{x:Null}" 
                  ItemsSource="{Binding MenuItems}" 
-                 Padding="0 100 0 0">
+                 Padding="0 100 0 0" 
+                 BorderThickness="0,0,0,0">
 
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -30,7 +31,9 @@
                     <Image Source="{Binding IconPath}" 
                            Margin="5 5 0 5"
                            MinWidth="35" 
-                           MinHeight="35"/>
+                           MinHeight="35" 
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Center"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
 
