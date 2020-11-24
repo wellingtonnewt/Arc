@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Arc.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -16,9 +17,10 @@ namespace Arc.UserControls
 
     public partial class SongLibrary : UserControl
     {
-        public SongLibrary()
+        public SongLibrary(SongLibraryViewModel viewModel)
         {
             InitializeComponent();
+            DataContext = viewModel;
         }
     }
 }

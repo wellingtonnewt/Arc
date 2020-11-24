@@ -8,13 +8,13 @@
         DataContext="{Binding RelativeSource={RelativeSource Self}}"
         Title="Arc" Height="720" Width="1280" Background="#212121">
     <Grid>
-        
+
         <!-- Gridz -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="60"/>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        
+
         <!-- Main Menu -->
         <ListBox Name="MainMenu"
                  Grid.Column="0"
@@ -26,7 +26,7 @@
 
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <!-- Song Library -->
+                    <!-- Main Menu Items -->
                     <Image Source="{Binding IconPath}" 
                            Margin="5 5 0 5"
                            MinWidth="35" 
@@ -37,9 +37,9 @@
         </ListBox>
 
         <!-- Content -->
-        <ContentControl Grid.Column="1" 
-                        Margin="10,0,0,0"
-                        Content="{Binding ElementName=MainMenu, Path=SelectedItem.Control}" Foreground="Black"/>
+        <Frame Grid.Column="1"
+               NavigationUIVisibility="Hidden"
+               Content="{Binding ElementName=MainMenu, Path=SelectedItem.Control}"/>
 
     </Grid>
 </Window>

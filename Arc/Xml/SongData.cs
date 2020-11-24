@@ -14,10 +14,10 @@ namespace Arc.Xml
         public List<string> Tags;
         public List<SongLyric> Lyric;
 
-        public SongData()
+        public SongData(string title, string author)
         {
-            Title = "";
-            Author = "";
+            Title = title;
+            Author = author;
             Tags = new List<string>();
             Lyric = new List<SongLyric>();
         }
