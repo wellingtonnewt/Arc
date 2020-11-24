@@ -17,10 +17,35 @@ namespace Arc.UserControls
 
     public partial class SongLibrary : UserControl
     {
+        private SongLibraryViewModel _viewModel;
+
         public SongLibrary(SongLibraryViewModel viewModel)
         {
             InitializeComponent();
+            _viewModel = viewModel;
             DataContext = viewModel;
+        }
+
+        private void ButtonEdit_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                if (button.Content is string content)
+                {
+                    if (content.Equals("EDIT"))
+                    {
+                        //TODO make title and author editable
+
+                        button.Content = "SAVE";
+                    } else if (content.Equals("SAVE"))
+                    {
+                        //TODO make title and author not editable
+
+                        _viewModel.SaveSong();
+                        button.Content = "EDIT";
+                    }
+                }
+            }
         }
     }
 }

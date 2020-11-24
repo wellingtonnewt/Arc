@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\chris\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\chris\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Arc.891647358.00" t="ExcludeRecursive" />
+    <e p="C:\Users\chris\source\repos\Arc" t="IncludeFlat">
+      <e p="Arc" t="IncludeRecursive">
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="Arc.csproj" t="IncludeRecursive" />
+        <e p="AssemblyInfo.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="MainMenuItem.cs" t="Include" />
+        <e p="MainWindow.xaml" t="Include" />
+        <e p="MainWindow.xaml.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="App.g.cs" t="Include" />
+              <e p="Arc.AssemblyInfo.cs" t="Include" />
+              <e p="MainWindow.g.cs" t="Include" />
+              <e p="UserControls" t="Include">
+                <e p="SongLibrary.g.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Resources" t="Include">
+          <e p="Images" t="Include">
+            <e p="Music_White.png" t="Include" />
+          </e>
+        </e>
+        <e p="UserControls" t="Include">
+          <e p="SongLibrary.xaml" t="Include" />
+          <e p="SongLibrary.xaml.cs" t="Include" />
+        </e>
+        <e p="ViewModels" t="Include">
+          <e p="MainWindowViewModel.cs" t="Include" />
+          <e p="SongLibraryViewModel.cs" t="Include" />
+        </e>
+        <e p="Xml" t="Include">
+          <e p="SongData.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Arc.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

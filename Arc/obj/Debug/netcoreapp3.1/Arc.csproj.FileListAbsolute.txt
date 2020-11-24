@@ -40,3 +40,24 @@ D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\UserControls\SongLibrary.g.cs
 D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\UserControls\SongLibrary.baml
 D:\Github\Software Tool\Arc\Arc\obj\Debug\netcoreapp3.1\UserControls\SongLibrary.g.cs
 D:\Github\Software Tool\Arc\Arc\obj\Debug\netcoreapp3.1\UserControls\SongLibrary.baml
+C:\Users\chris\source\repos\Arc\Arc\bin\Debug\netcoreapp3.1\Arc.exe
+C:\Users\chris\source\repos\Arc\Arc\bin\Debug\netcoreapp3.1\Arc.deps.json
+C:\Users\chris\source\repos\Arc\Arc\bin\Debug\netcoreapp3.1\Arc.runtimeconfig.json
+C:\Users\chris\source\repos\Arc\Arc\bin\Debug\netcoreapp3.1\Arc.runtimeconfig.dev.json
+C:\Users\chris\source\repos\Arc\Arc\bin\Debug\netcoreapp3.1\Arc.dll
+C:\Users\chris\source\repos\Arc\Arc\bin\Debug\netcoreapp3.1\Arc.pdb
+C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.csprojAssemblyReference.cache
+C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\UserControls\SongLibrary.g.cs
+C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\Arc_MarkupCompile.cache
+C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\Arc_MarkupCompile.lref
+C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\UserControls\SongLibrary.baml
+C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.g.resources
+C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.AssemblyInfoInputs.cache
+C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.AssemblyInfo.cs
+C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.csproj.CoreCompileInputs.cache
+C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.dll
+C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.pdb
+C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.genruntimeconfig.cache

@@ -31,5 +31,11 @@ namespace Arc.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        public void SaveSong()
+        {
+            Console.WriteLine("Saving song "+_songData.Title+ " to file.");
+            _songData.Save();
+        }
     }
 }

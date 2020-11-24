@@ -14,6 +14,7 @@ namespace Arc.Xml
         public List<string> Tags;
         public List<SongLyric> Lyric;
 
+        public SongData(){}
         public SongData(string title, string author)
         {
             Title = title;
@@ -22,9 +23,9 @@ namespace Arc.Xml
             Lyric = new List<SongLyric>();
         }
 
-        public void Save(string fileName)
+        public void Save()
         {
-            using (FileStream stream = new FileStream(fileName, FileMode.Create))
+            using (FileStream stream = new FileStream(Title+".xml", FileMode.Create))
             {
                 XmlSerializer xml = new XmlSerializer(typeof(SongData));
                 xml.Serialize(stream, this);
