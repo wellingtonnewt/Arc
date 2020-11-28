@@ -9,6 +9,8 @@ namespace Arc.ViewModels
 {
     public class SongLibraryViewModel : INotifyPropertyChanged
     {
+
+
         private SongData _songData;
 
         public SongData SongData {
@@ -21,12 +23,12 @@ namespace Arc.ViewModels
             } 
         }
 
+        public ObservableCollection<SongData> Songs { get; set; }
+
         public ObservableCollection<SongLyric> SongLyrics { get; set; }
 
-        public SongLibraryViewModel(SongData songData)
+        public SongLibraryViewModel()
         {
-            SongData = songData;
-
             SongLyrics = new ObservableCollection<SongLyric>();
             SongLyrics.Add(new SongLyric());
             SongLyrics.Add(new SongLyric());

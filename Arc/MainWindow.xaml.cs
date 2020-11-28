@@ -17,6 +17,7 @@ namespace Arc
         {
             InitializeComponent();
             DataContext = new MainWindowViewModel();
+            MainMenu.SelectedIndex = 0;
         }
     }
 }

@@ -12,12 +12,19 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
+
         <!-- Song Search Area -->
-        <Border Grid.Column="0">
-            <Grid>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <TextBox Grid.Row="0" Margin="5"/>
+
+            <Grid Grid.Row="1" Margin="10">
                 <ListBox Background="{x:Null}"
-                         Margin="100 100 100 250"
                          Foreground="White"
                          FontSize="17"
                          BorderThickness="0">
@@ -29,7 +36,23 @@
                     <ListBoxItem Content="Song Number 6" />
                 </ListBox>
             </Grid>
-        </Border>
+
+            <Grid Margin="10,5,10,10
+                  " Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Content="New" />
+                <Button Grid.Column="2" Content="Display" />
+                <Button
+                    Grid.Column="3"
+                    Margin="5,0,0,0"
+                    Content="Edit" />
+            </Grid>
+        </Grid>
 
         <!-- Song Data Area -->
         <Border Grid.Column="1">

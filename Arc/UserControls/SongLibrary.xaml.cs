@@ -19,11 +19,11 @@ namespace Arc.UserControls
     {
         private SongLibraryViewModel _viewModel;
 
-        public SongLibrary(SongLibraryViewModel viewModel)
+        public SongLibrary()
         {
             InitializeComponent();
-            _viewModel = viewModel;
-            DataContext = viewModel;
+            _viewModel = new SongLibraryViewModel();
+            DataContext = _viewModel;
         }
 
         private void ButtonEdit_Click(object sender, RoutedEventArgs e)

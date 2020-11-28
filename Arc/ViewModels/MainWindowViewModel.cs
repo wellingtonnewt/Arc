@@ -16,7 +16,7 @@ namespace Arc.ViewModels
         {
             MenuItems = new ObservableCollection<MainMenuItem>();
 
-            MenuItems.Add(new MainMenuItem("/Resources/Images/Music_White.png", new SongLibrary(new ViewModels.SongLibraryViewModel(new SongData("Title", "Author")))));
+            MenuItems.Add(new MainMenuItem("/Resources/Images/Music_White.png", new SongLibrary()));
         }
         public event PropertyChangedEventHandler PropertyChanged;
 
