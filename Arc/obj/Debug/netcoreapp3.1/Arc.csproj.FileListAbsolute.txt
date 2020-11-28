@@ -61,3 +61,6 @@ C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.csproj.CoreCompi
 C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.dll
 C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.pdb
 C:\Users\chris\source\repos\Arc\Arc\obj\Debug\netcoreapp3.1\Arc.genruntimeconfig.cache
+D:\Github\Software Tool\Arc\Arc\obj\Debug\netcoreapp3.1\App.baml
+D:\Github\Software Tool\Arc\Arc\obj\Debug\netcoreapp3.1\Resources\Dictionaries\ButtonStyles.baml
+D:\Github\Software Tool\Arc\Arc\obj\Debug\netcoreapp3.1\Resources\Dictionaries\DefaultTheme.baml

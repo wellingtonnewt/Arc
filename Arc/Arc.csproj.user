@@ -15,6 +15,12 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\Dictionaries\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Dictionaries\DefaultTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="UserControls\SongLibrary.xaml">
       <SubType>Designer</SubType>
     </Page>

@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Arc.Resources.Dictionaries">
+    
+    <!-- From Dark to Light | Def -->
+    <SolidColorBrush x:Key="defDarkest" Color="#121212" />
+    <SolidColorBrush x:Key="defCanvas" Color="#212121"/>
+    <SolidColorBrush x:Key="defDefault" Color="#2E2E2E"/>
+    <SolidColorBrush x:Key="defLight" Color="#383838"/>
+    
+    <!-- From Red to Pink | Tags -->
+    <SolidColorBrush x:Key="tagRed" Color="#DA2323" />
+    <SolidColorBrush x:Key="tagOrange" Color="#DA7F23"/>
+    <SolidColorBrush x:Key="tagGreen" Color="#70B83A"/>
+    <SolidColorBrush x:Key="tagCyan" Color="#23DAC4"/>
+    <SolidColorBrush x:Key="tagViolet" Color="#8654BD"/>
+    <SolidColorBrush x:Key="tagPink" Color="#CC4AB2"/>
+    
+    <!-- Greatest Color Ever | Blue -->
+    <SolidColorBrush x:Key="blueProminent" Color="#235DDA"/>
+    
+    <!-- Foreground -->
+    <SolidColorBrush x:Key="foreWhite" Color="#E7F0EE"/>
+    <SolidColorBrush x:Key="foreSecondary" Color="#E3E3E3"/>
+    <SolidColorBrush x:Key="foreButton" Color="#BDBDBD"/>
+    <SolidColorBrush x:Key="foreInfo" Color="#828282"/>
+
+</ResourceDictionary>

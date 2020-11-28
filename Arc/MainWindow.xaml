@@ -28,7 +28,7 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <!-- Main Menu Items -->
-                    <Image Source="{Binding IconPath}" 
+                    <Image Source="{Binding IconPath}"
                            Margin="5 5 0 5"
                            MinWidth="35" 
                            MinHeight="35" 
