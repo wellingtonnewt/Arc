@@ -25,10 +25,33 @@ namespace Arc.Xml
 
         public void Save()
         {
-            using (FileStream stream = new FileStream(Title+".xml", FileMode.Create))
+            if (!Directory.Exists("Songs"))
+            {
+                Directory.CreateDirectory("Songs");
+            }
+
+            using (FileStream stream = new FileStream("Songs/" + Title + ".xml", FileMode.Create))
             {
                 XmlSerializer xml = new XmlSerializer(typeof(SongData));
                 xml.Serialize(stream, this);
+            }
+
+        }
+
+        public static SongData Load(string path)
+        {
+            if (File.Exists(path))
+            {
+                using (FileStream stream = new FileStream(path, FileMode.Open))
+                {
+                    XmlSerializer xml = new XmlSerializer(typeof(SongData));
+                    return (SongData) xml.Deserialize(stream);
+                }
+            }
+            else
+            {
+                Console.WriteLine($"File {path} was not found");
+                return null;
             }
         }
 

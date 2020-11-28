@@ -20,20 +20,21 @@
                 <RowDefinition Height="6*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-
+            
+            <!-- Search Box -->
             <TextBox Grid.Row="0" Margin="5"/>
-
+            
             <Grid Grid.Row="1" Margin="10">
-                <ListBox Background="{x:Null}"
+                <ListBox ItemsSource="{Binding Songs}"
+                         Background="{x:Null}"
                          Foreground="White"
                          FontSize="17"
                          BorderThickness="0">
-                    <ListBoxItem Content="Song Number 1" />
-                    <ListBoxItem Content="Song Number 2" />
-                    <ListBoxItem Content="Song Number 3" />
-                    <ListBoxItem Content="Song Number 4" />
-                    <ListBoxItem Content="Song Number 5" />
-                    <ListBoxItem Content="Song Number 6" />
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Title}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
                 </ListBox>
             </Grid>
 

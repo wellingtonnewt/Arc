@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
+using System.IO;
 
 namespace Arc.ViewModels
 {
@@ -30,8 +31,21 @@ namespace Arc.ViewModels
         public SongLibraryViewModel()
         {
             SongLyrics = new ObservableCollection<SongLyric>();
+            Songs = new ObservableCollection<SongData>();
+
+            ProcessDirectory();
+
             SongLyrics.Add(new SongLyric());
             SongLyrics.Add(new SongLyric());
+        }
+        void ProcessDirectory()
+        {
+            string[] files = Directory.GetFiles("Songs");
+
+            foreach (string filePath in files)
+            {
+                Songs.Add(SongData.Load(filePath));
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
