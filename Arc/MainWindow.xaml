@@ -21,7 +21,8 @@
                  Background="#FF2D2D2D"   
                  BorderBrush="{x:Null}" 
                  Foreground="{x:Null}" 
-                 ItemsSource="{Binding MenuItems}" 
+                 ItemsSource="{Binding MenuItems}"
+                 ItemContainerStyle="{StaticResource Lyrics}"
                  Padding="0 100 0 0" 
                  BorderThickness="0,0,0,0">
 

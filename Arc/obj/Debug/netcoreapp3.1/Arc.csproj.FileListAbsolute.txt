@@ -67,3 +67,4 @@ D:\Github\Software Tool\Arc\Arc\obj\Debug\netcoreapp3.1\Resources\Dictionaries\D
 D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\App.baml
 D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\Resources\Dictionaries\ButtonStyles.baml
 D:\Projekte\WPF\Arc\Arc\obj\Debug\netcoreapp3.1\Resources\Dictionaries\DefaultTheme.baml
+D:\Github\Software Tool\Arc\Arc\obj\Debug\netcoreapp3.1\Resources\Dictionaries\ListBoxStyles.baml

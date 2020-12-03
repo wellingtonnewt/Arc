@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 D:\Github\Software Tool\Arc\Arc\App.xaml
-4-1759001594
+52022764087
 
 101756485130
 1921654412462
-MainWindow.xaml;Resources\Dictionaries\ButtonStyles.xaml;Resources\Dictionaries\DefaultTheme.xaml;UserControls\SongLibrary.xaml;
+MainWindow.xaml;Resources\Dictionaries\ButtonStyles.xaml;Resources\Dictionaries\DefaultTheme.xaml;Resources\Dictionaries\ListBoxStyles.xaml;UserControls\SongLibrary.xaml;
 
-False
+True
 

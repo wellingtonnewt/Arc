@@ -13,7 +13,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Song Search Area -->
+        <!--
         <Grid Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
@@ -21,7 +21,6 @@
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
             
-            <!-- Search Box -->
             <TextBox Grid.Row="0" Margin="5"/>
             
             <Grid Grid.Row="1" Margin="10">
@@ -54,6 +53,41 @@
                     Content="Edit" />
             </Grid>
         </Grid>
+        -->
+        
+        <!-- Song Search Area -->
+        <Border Grid.Column="0">
+            <StackPanel>
+                <Grid Margin="50 100 100 0"
+                      Background="#2E2E2E">
+                    <TextBox Text="Search For Songs"
+                             TextChanged="songSearchFilter"
+                             Name="songSearch"
+                             FontSize="15"
+                             Padding="5 15 0 0"
+                             Foreground="White"
+                             Background="{x:Null}"
+                             BorderBrush="{x:Null}"/>
+                </Grid>
+                <Grid Background="#235DDA"
+                      Height="5"
+                      Margin="50 0 100 0"/>
+                <ListBox Margin="50 10 100 0"
+                         Name="songList"
+                         ItemsSource="{Binding Songs}"
+                         Background="#2E2E2E"
+                         Foreground="White"
+                         FontSize="17"
+                         BorderThickness="0">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Title}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+            </StackPanel>
+        </Border>
 
         <!-- Song Data Area -->
         <Border Grid.Column="1">
@@ -92,6 +126,8 @@
                 
                 <!-- Lyrics -->
                 <ListBox ItemsSource="{Binding SongLyrics}"
+                         ItemContainerStyle="{StaticResource Lyrics}"
+                         SelectionChanged="lyricChange"
                          BorderBrush="{x:Null}"
                          Background="{x:Null}"
                          Foreground="{x:Null}"
@@ -144,12 +180,6 @@
             </StackPanel>
         </Border>
 
-        <!-- Song Search Area -->
-        <Border>
-            <StackPanel>
-
-            </StackPanel>
-        </Border>
     <!-- Styles -->
     </Grid>
 

@@ -1,4 +1,5 @@
 ﻿using Arc.ViewModels;
+using Arc.Xml;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -24,28 +25,25 @@ namespace Arc.UserControls
             InitializeComponent();
             _viewModel = new SongLibraryViewModel();
             DataContext = _viewModel;
+            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(songList.ItemsSource);
+            view.Filter = SongFilter;
         }
 
-        private void ButtonEdit_Click(object sender, RoutedEventArgs e)
+        private void lyricChange(object sender, SelectionChangedEventArgs e)
         {
-            if (sender is Button button)
-            {
-                if (button.Content is string content)
-                {
-                    if (content.Equals("EDIT"))
-                    {
-                        //TODO make title and author editable
 
-                        button.Content = "SAVE";
-                    } else if (content.Equals("SAVE"))
-                    {
-                        //TODO make title and author not editable
+        }
+        private bool SongFilter(object item)
+        {
+            if (String.IsNullOrEmpty(songSearch.Text))
+                return true;
+            else
+                return (item as SongData).Title.Contains(songSearch.Text);
+        }
 
-                        _viewModel.SaveSong();
-                        button.Content = "EDIT";
-                    }
-                }
-            }
+        private void songSearchFilter(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            CollectionViewSource.GetDefaultView(_viewModel.Songs).Refresh();
         }
     }
 }

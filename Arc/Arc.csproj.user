@@ -21,6 +21,9 @@
     <Page Update="Resources\Dictionaries\DefaultTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\Dictionaries\ListBoxStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="UserControls\SongLibrary.xaml">
       <SubType>Designer</SubType>
     </Page>
