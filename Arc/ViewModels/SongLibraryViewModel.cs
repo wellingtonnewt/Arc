@@ -37,6 +37,7 @@ namespace Arc.ViewModels
 
             SongLyrics.Add(new SongLyric());
             SongLyrics.Add(new SongLyric());
+            SongLyrics.Add(new SongLyric());
         }
 
         void ProcessDirectory()

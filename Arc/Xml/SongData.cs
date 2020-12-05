@@ -55,6 +55,10 @@ namespace Arc.Xml
             }
         }
 
+        public void Delete()
+        {
+            File.Delete("Songs/" + Title + ".xml");
+        }
     }
 
     public class SongLyric

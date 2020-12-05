@@ -60,8 +60,7 @@
             <StackPanel>
                 <Grid Margin="50 100 100 0"
                       Background="#2E2E2E">
-                    <TextBox Text="Search For Songs"
-                             TextChanged="songSearchFilter"
+                    <TextBox TextChanged="songSearchFilter"
                              Name="songSearch"
                              FontSize="15"
                              Padding="5 15 0 0"
@@ -75,6 +74,8 @@
                 <ListBox Margin="50 10 100 0"
                          Name="songList"
                          ItemsSource="{Binding Songs}"
+                         SelectionChanged="songList_SelectionChanged"
+                         SelectionMode="Single"
                          Background="#2E2E2E"
                          Foreground="White"
                          FontSize="17"
@@ -85,7 +86,8 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-
+                <Button Content="Add" Click="SongAdd_Click"/>
+                <Button Content="Delete" Click="SongAdd_Click"/>
             </StackPanel>
         </Border>
 
