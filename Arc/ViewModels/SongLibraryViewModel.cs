@@ -42,6 +42,11 @@ namespace Arc.ViewModels
 
         void ProcessDirectory()
         {
+            if (!Directory.Exists("Songs"))
+            {
+                Directory.CreateDirectory("Songs");
+            }
+
             string[] files = Directory.GetFiles("Songs");
 
             foreach (string filePath in files)

@@ -71,6 +71,7 @@
                 <Grid Background="#235DDA"
                       Height="5"
                       Margin="50 0 100 0"/>
+                <!-- Song List -->
                 <ListBox Margin="50 10 100 0"
                          Name="songList"
                          ItemsSource="{Binding Songs}"
@@ -78,6 +79,8 @@
                          SelectionMode="Single"
                          Background="#2E2E2E"
                          Foreground="White"
+                         MaxHeight="300"
+                         MinHeight="100"
                          FontSize="17"
                          BorderThickness="0">
                     <ListBox.ItemTemplate>
@@ -86,8 +89,47 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-                <Button Content="Add" Click="SongAdd_Click"/>
-                <Button Content="Delete" Click="SongAdd_Click"/>
+                <!-- Manager Buttons -->
+                <StackPanel Orientation="Horizontal" Margin="50 10 100 0">
+                    <!-- New Song -->
+                    <Button Style="{StaticResource DefaultButton}"
+                            Name="newSongButton"
+                            Content="New" 
+                            MinWidth="50"
+                            MinHeight="30"
+                            Margin="0 0 5 0"
+                            Click="SongAdd_Click"
+                            BorderThickness="0"/>
+                    <!-- Delete Song -->
+                    <Button Style="{StaticResource DefaultButton}"
+                            Name="deleteSongButton"
+                            Content="Delete"
+                            MinWidth="50"
+                            MinHeight="30"
+                            Margin="5 0 0 0"
+                            Click="SongDelete_Click"
+                            BorderThickness="0"/>
+                    <!-- Save New Song -->
+                    <Button Style="{StaticResource DefaultButton}"
+                            Name="saveSongButton"
+                            Content="Save" 
+                            MinWidth="50"
+                            MinHeight="30"
+                            Margin="0 0 5 0"
+                            Click="SongSave_Click"
+                            Visibility="Collapsed"
+                            BorderThickness="0"/>
+                    <!-- Discard New Song -->
+                    <Button Style="{StaticResource DefaultButton}"
+                            Name="discardSongButton"
+                            Content="Discard" 
+                            MinWidth="50"
+                            MinHeight="30"
+                            Margin="5 0 0 0"
+                            Click="SongDiscard_Click"
+                            Visibility="Collapsed"
+                            BorderThickness="0"/>
+                </StackPanel>
             </StackPanel>
         </Border>
 
@@ -135,6 +177,7 @@
                          Foreground="{x:Null}"
                          BorderThickness="0"
                          HorizontalContentAlignment="Stretch"
+                         VerticalContentAlignment="Center"
                          Margin="43 5 63 0">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
@@ -152,13 +195,14 @@
                                         Height="65"
                                         Width="65"
                                         Content="Eye"/>
-                                
                                 <!-- Background -->
                                 <Grid Background="#121212">
                                     <!-- Lyrics -->
-                                    <TextBox Text="First lyrics here.&#x0a;Also known as first stanza.&#x0a;Amazing stuff going on.&#x0a;Woooh"
-                                             VerticalAlignment="Center"
-                                             HorizontalAlignment="Center"
+                                    <TextBox Text="{Binding Text}"
+                                             Name="lyricBox"
+                                             VerticalAlignment="Stretch"
+                                             HorizontalAlignment="Stretch"
+                                             VerticalContentAlignment="Center"
                                              Background="{x:Null}"
                                              Foreground="#E3E3E3    " 
                                              BorderBrush="{x:Null}" 
@@ -166,8 +210,7 @@
                                              SelectionTextBrush="{x:Null}" 
                                              FontSize="15"
                                              BorderThickness="0"
-                                             TextAlignment="Center" 
-                                             Margin="0 15"/>
+                                             TextAlignment="Center"/>
                                 </Grid>
                             </DockPanel>
                         </DataTemplate>

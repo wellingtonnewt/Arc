@@ -63,8 +63,8 @@ namespace Arc.Xml
 
     public class SongLyric
     {
-        public SongLyricType Type;
-        public string Text;
+        public SongLyricType Type { get; set; }
+        public string Text { get; set; }
     }
 
     public enum SongLyricType

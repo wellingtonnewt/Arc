@@ -86,7 +86,7 @@
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames Storyboard.TargetName="Border"
                                                                       Storyboard.TargetProperty="(Panel.Background). (SolidColorBrush.Color)">
-                                            <EasingColorKeyFrame KeyTime="0" Value="Transparent" />
+                                            <EasingColorKeyFrame KeyTime="0" Value="#235DDA" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>

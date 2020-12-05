@@ -39,7 +39,7 @@ namespace Arc.UserControls
             if (String.IsNullOrEmpty(songSearch.Text))
                 return true;
             else
-                return (item as SongData).Title.Contains(songSearch.Text,StringComparison.OrdinalIgnoreCase);
+                return (item as SongData).Title.Contains(songSearch.Text, StringComparison.OrdinalIgnoreCase);
         }
 
         private void songSearchFilter(object sender, System.Windows.Controls.TextChangedEventArgs e)
@@ -64,19 +64,24 @@ namespace Arc.UserControls
         
         private void SongAdd_Click(object sender, RoutedEventArgs e)
         {
-            _viewModel.Songs.Add(new SongData("Hello", "Adell") 
+            discardSongButton.Visibility = Visibility.Visible;
+            saveSongButton.Visibility = Visibility.Visible;
+            deleteSongButton.Visibility = Visibility.Collapsed;
+            newSongButton.Visibility = Visibility.Collapsed;
+
+            _viewModel.Songs.Add(new SongData("Title", "Author")
             {
                 Lyric = new List<SongLyric>()
-                { 
-                    new SongLyric() 
-                    { 
-                        Text = "test"
-                    } 
+                {
+                    new SongLyric()
+                    {
+                       Text = "Verse 1"
+                    }
                 }
             });
+
             SongData lastSong = _viewModel.Songs[_viewModel.Songs.Count - 1];
             _viewModel.SongData = lastSong;
-            lastSong.Save();
 
             _viewModel.SongLyrics.Clear();
 
@@ -89,9 +94,36 @@ namespace Arc.UserControls
         private void SongDelete_Click(object sender, RoutedEventArgs e)
         {
             SongData selectedItem =(songList.SelectedItem as SongData);
+            if (selectedItem != null)
+            {
+                selectedItem.Delete();
+                _viewModel.Songs.Remove(selectedItem);
+                _viewModel.SongData = null;
+            }
+        }
+        private void SongDiscard_Click(object sender, RoutedEventArgs e)
+        {
+            discardSongButton.Visibility = Visibility.Collapsed;
+            saveSongButton.Visibility = Visibility.Collapsed;
+            deleteSongButton.Visibility = Visibility.Visible;
+            newSongButton.Visibility = Visibility.Visible;
+
+            SongData selectedItem = _viewModel.Songs[_viewModel.Songs.Count - 1];
+            _viewModel.SongData = selectedItem;
             selectedItem.Delete();
             _viewModel.Songs.Remove(selectedItem);
             _viewModel.SongData = null;
+        }
+        private void SongSave_Click(object sender, RoutedEventArgs e)
+        {
+            discardSongButton.Visibility = Visibility.Collapsed;
+            saveSongButton.Visibility = Visibility.Collapsed;
+            deleteSongButton.Visibility = Visibility.Visible;
+            newSongButton.Visibility = Visibility.Visible;
+
+            SongData lastSong = _viewModel.Songs[_viewModel.Songs.Count - 1];
+            _viewModel.SongData = lastSong;
+            lastSong.Save();
         }
     }
 }
