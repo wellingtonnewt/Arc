@@ -4,8 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Arc.UserControls"
+             xmlns:helpers="clr-namespace:Arc.Helpers" 
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             xmlns:Windows="clr-namespace:System.Windows;assembly=PresentationCore"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <helpers:InverseBooleanConverter x:Key="inverter"/>
+    </UserControl.Resources>
     <Grid>
         <!-- Gridz -->
         <Grid.ColumnDefinitions>
@@ -13,48 +19,6 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!--
-        <Grid Grid.Column="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="6*"/>
-                <RowDefinition Height="1*"/>
-            </Grid.RowDefinitions>
-            
-            <TextBox Grid.Row="0" Margin="5"/>
-            
-            <Grid Grid.Row="1" Margin="10">
-                <ListBox ItemsSource="{Binding Songs}"
-                         Background="{x:Null}"
-                         Foreground="White"
-                         FontSize="17"
-                         BorderThickness="0">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Title}"/>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
-            </Grid>
-
-            <Grid Margin="10,5,10,10
-                  " Grid.Row="3">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="auto" />
-                    <ColumnDefinition Width="auto" />
-                </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Content="New" />
-                <Button Grid.Column="2" Content="Display" />
-                <Button
-                    Grid.Column="3"
-                    Margin="5,0,0,0"
-                    Content="Edit" />
-            </Grid>
-        </Grid>
-        -->
-        
         <!-- Song Search Area -->
         <Border Grid.Column="0">
             <StackPanel>
@@ -93,41 +57,43 @@
                 <StackPanel Orientation="Horizontal" Margin="50 10 100 0">
                     <!-- New Song -->
                     <Button Style="{StaticResource DefaultButton}"
+                            Visibility="{Binding IsNotInEditModeButton}"
                             Name="newSongButton"
                             Content="New" 
                             MinWidth="50"
                             MinHeight="30"
                             Margin="0 0 5 0"
-                            Click="SongAdd_Click"
+                            Command="{Binding NewClick}"
                             BorderThickness="0"/>
                     <!-- Delete Song -->
                     <Button Style="{StaticResource DefaultButton}"
+                            Visibility="{Binding IsNotInEditModeButton}"
                             Name="deleteSongButton"
                             Content="Delete"
                             MinWidth="50"
                             MinHeight="30"
                             Margin="5 0 0 0"
-                            Click="SongDelete_Click"
+                            Command="{Binding DeleteClick}"
                             BorderThickness="0"/>
                     <!-- Save New Song -->
                     <Button Style="{StaticResource DefaultButton}"
+                            Visibility="{Binding IsInEditModeButton}"
                             Name="saveSongButton"
                             Content="Save" 
                             MinWidth="50"
                             MinHeight="30"
                             Margin="0 0 5 0"
-                            Click="SongSave_Click"
-                            Visibility="Collapsed"
+                            Command="{Binding SaveClick}"
                             BorderThickness="0"/>
                     <!-- Discard New Song -->
                     <Button Style="{StaticResource DefaultButton}"
+                            Visibility="{Binding IsInEditModeButton}"
                             Name="discardSongButton"
                             Content="Discard" 
                             MinWidth="50"
                             MinHeight="30"
                             Margin="5 0 0 0"
-                            Click="SongDiscard_Click"
-                            Visibility="Collapsed"
+                            Command="{Binding DiscardClick}"
                             BorderThickness="0"/>
                 </StackPanel>
             </StackPanel>
@@ -140,8 +106,10 @@
                 <Grid Background="#121212"
                       Margin="50 100 100 0">
                     <!-- Title -->
+
                     <StackPanel HorizontalAlignment="Center">
                         <TextBox Text="{Binding SongData.Title}"
+                                 IsReadOnly="{Binding IsInEditMode, Converter={StaticResource inverter}}"
                                  Background="{x:Null}" 
                                  Foreground="#E3E3E3" 
                                  BorderBrush="{x:Null}" 
@@ -153,6 +121,7 @@
                                  BorderThickness="0,0,0,0"/>
                         <!-- Author -->
                         <TextBox Text="{Binding SongData.Author}" 
+                                 IsReadOnly="{Binding IsInEditMode, Converter={StaticResource inverter}}"
                                  Background="{x:Null}" 
                                  BorderBrush="{x:Null}"
                                  Foreground="#E3E3E3"
@@ -199,6 +168,7 @@
                                 <Grid Background="#121212">
                                     <!-- Lyrics -->
                                     <TextBox Text="{Binding Text}"
+                                             IsReadOnly="{Binding IsInEditMode, Converter={StaticResource inverter}}"
                                              Name="lyricBox"
                                              VerticalAlignment="Stretch"
                                              HorizontalAlignment="Stretch"
