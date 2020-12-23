@@ -11,7 +11,7 @@
 
         <!-- Gridz -->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="75"/>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
@@ -33,9 +33,9 @@
                 <DataTemplate>
                     <!-- Main Menu Items -->
                     <Image Source="{Binding IconPath}"
-                           Margin="0 35"
-                           MinWidth="35" 
-                           MinHeight="35" 
+                           Margin="0 15"
+                           MinWidth="30" 
+                           MinHeight="30" 
                            HorizontalAlignment="Center" 
                            VerticalAlignment="Center"/>
                 </DataTemplate>

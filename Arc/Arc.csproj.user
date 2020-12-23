@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="UserControls\Bible.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControls\SongLibrary.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,6 +25,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Dictionaries\ListBoxStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\Bible.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControls\SongLibrary.xaml">
