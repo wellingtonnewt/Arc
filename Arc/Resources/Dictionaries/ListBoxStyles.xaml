@@ -4,7 +4,7 @@
     <Style x:Key="{x:Type ListBox}"
        TargetType="ListBox">
         <Setter Property="SnapsToDevicePixels" Value="true" />
-        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
         <Setter Property="ScrollViewer.CanContentScroll" Value="true" />
@@ -12,8 +12,8 @@
             <Setter.Value>
                 <ControlTemplate TargetType="ListBox">
                     <Border Name="Border"
-                BorderThickness="1"
-                CornerRadius="2">
+                            BorderThickness="1"
+                            CornerRadius="2">
                         <Border.Background>
                             <SolidColorBrush Color="Transparent" />
                         </Border.Background>
@@ -24,26 +24,65 @@
                         </ScrollViewer>
                     </Border>
                     <ControlTemplate.Triggers>
-                        <Trigger Property="IsEnabled"
-                   Value="false">
-                            <Setter TargetName="Border"
-                    Property="Background">
+                        <Trigger Property="IsEnabled" Value="true">
+                            <Setter TargetName="Border" Property="Background">
                                 <Setter.Value>
-                                    <SolidColorBrush Color="Transparent" />
+                                    <SolidColorBrush Color="#2E2E2E" />
                                 </Setter.Value>
                             </Setter>
-                            <Setter TargetName="Border"
-                    Property="BorderBrush">
+                            <Setter TargetName="Border" Property="BorderBrush">
                                 <Setter.Value>
                                     <SolidColorBrush Color="Transparent"/>
                                 </Setter.Value>
 
                             </Setter>
                         </Trigger>
-                        <Trigger Property="IsGrouping"
-                   Value="true">
-                            <Setter Property="ScrollViewer.CanContentScroll"
-                    Value="false" />
+                        <Trigger Property="IsGrouping" Value="true">
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="false" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="Lyric"
+       TargetType="ListBox">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="ScrollViewer.CanContentScroll" Value="true" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBox">
+                    <Border Name="Border"
+                            BorderThickness="1"
+                            CornerRadius="2">
+                        <Border.Background>
+                            <SolidColorBrush Color="Transparent" />
+                        </Border.Background>
+                        <ScrollViewer Margin="0"
+                        Focusable="false">
+                            <StackPanel Margin="0"
+                        IsItemsHost="True" />
+                        </ScrollViewer>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="true">
+                            <Setter TargetName="Border" Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="Transparent" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="Border" Property="BorderBrush">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="Transparent"/>
+                                </Setter.Value>
+
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsGrouping" Value="true">
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="false" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

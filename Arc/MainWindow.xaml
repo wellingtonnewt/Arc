@@ -23,14 +23,17 @@
                  Foreground="{x:Null}" 
                  ItemsSource="{Binding MenuItems}"
                  ItemContainerStyle="{StaticResource Lyrics}"
-                 Padding="0 100 0 0" 
+                 Margin="0 0 0 0" 
+                 Height="250"
+                 VerticalAlignment="Center"
+                 HorizontalContentAlignment="Center"
                  BorderThickness="0,0,0,0">
 
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <!-- Main Menu Items -->
                     <Image Source="{Binding IconPath}"
-                           Margin="5 5 0 5"
+                           Margin="0 35"
                            MinWidth="35" 
                            MinHeight="35" 
                            HorizontalAlignment="Center" 

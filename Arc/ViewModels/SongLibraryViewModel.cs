@@ -13,6 +13,7 @@ namespace Arc.ViewModels
 {
     public class SongLibraryViewModel : INotifyPropertyChanged
     {
+
         private bool _isInEditMode;
 
         public bool IsInEditMode
@@ -57,6 +58,9 @@ namespace Arc.ViewModels
         public ICommand SaveClick { get; set; }
         public ICommand DiscardClick { get; set; }
         public ICommand AddLyric { get; set; }
+        public ICommand EditClick { get; set; }
+        public ICommand SaveEditClick { get; set; }
+        public ICommand DiscardEditClick { get; set; }
 
         private SongData _songData;
 
@@ -95,11 +99,10 @@ namespace Arc.ViewModels
             DiscardClick = new RelayCommand(o => DiscardSong_Click(o));
             SaveClick = new RelayCommand(o => SaveSong_Click(o));
             AddLyric = new RelayCommand(o => Add_Lyric(o));
+            EditClick = new RelayCommand(o => Edit_Click(o));
+            SaveEditClick = new RelayCommand(o => SaveEdit_Click(o));
+            DiscardEditClick = new RelayCommand(o => DiscardEdit_Click(o));
 
-            if (IsInEditMode)
-            {
-
-            }
         }
 
         void ProcessDirectory()
@@ -168,7 +171,7 @@ namespace Arc.ViewModels
 
             SongData selectedItem = Songs[Songs.Count - 1];
             SongData = selectedItem;
-            selectedItem.Delete();
+            SongLyrics.Clear();
             Songs.Remove(selectedItem);
             SongData = null;
         }
@@ -199,6 +202,24 @@ namespace Arc.ViewModels
             {
                 SongLyrics.Add(lyric);
             }
+        }
+        private void Edit_Click(object sender)
+        {
+            SongData selectedItem = SongData;
+            if (selectedItem != null)
+            {
+                IsInEditMode = true;
+            }
+        }
+        private void SaveEdit_Click(object sender)
+        {
+            IsInEditMode = false;
+            SongData selectedItem = SongData;
+            selectedItem.Save();
+        }
+        private void DiscardEdit_Click(object sender)
+        {
+            IsInEditMode = false;
         }
     }
 }
