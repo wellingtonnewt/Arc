@@ -49,17 +49,26 @@ namespace Arc.UserControls
 
         private void songList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (e.AddedItems.Count == 0)
-                return;
-            SongData selectedItem = (SongData)e.AddedItems[0];
-            _viewModel.SongData = selectedItem;
-            _viewModel.SongLyrics.Clear();
-
-            foreach (SongLyric lyric in selectedItem.Lyric)
+            if (_viewModel.IsInEditMode)
             {
-                _viewModel.SongLyrics.Add(lyric);
+                SongData selectedSong = _viewModel.SongData;
+                _viewModel.SongData = selectedSong;
+                (sender as ListBox).SelectedItem = null;
             }
+            else
+            {
+                if (e.AddedItems.Count == 0)
+                    return;
+                SongData selectedItem = (SongData)e.AddedItems[0];
+                _viewModel.SongData = selectedItem;
+                _viewModel.SongLyrics.Clear();
 
+                foreach (SongLyric lyric in selectedItem.Lyric)
+                {
+                    _viewModel.SongLyrics.Add(lyric);
+                }
+            }
+           
         }
     }
 }

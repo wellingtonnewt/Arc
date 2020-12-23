@@ -191,6 +191,8 @@
                 <Button Height="65"        
                         Width="65"        
                         Content="Add"
+                        Visibility="{Binding IsInEditModeButton}"
+                        Command="{Binding AddLyric}"
                         Style="{StaticResource DefaultButton}"/>
             </StackPanel>
         </Border>

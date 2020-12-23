@@ -56,6 +56,7 @@ namespace Arc.ViewModels
         public ICommand DeleteClick { get; set; }
         public ICommand SaveClick { get; set; }
         public ICommand DiscardClick { get; set; }
+        public ICommand AddLyric { get; set; }
 
         private SongData _songData;
 
@@ -93,6 +94,12 @@ namespace Arc.ViewModels
             DeleteClick = new RelayCommand(o => DeleteSong_Click(o));
             DiscardClick = new RelayCommand(o => DiscardSong_Click(o));
             SaveClick = new RelayCommand(o => SaveSong_Click(o));
+            AddLyric = new RelayCommand(o => Add_Lyric(o));
+
+            if (IsInEditMode)
+            {
+
+            }
         }
 
         void ProcessDirectory()
@@ -115,12 +122,6 @@ namespace Arc.ViewModels
         protected virtual void OnPropertyChanged(string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        public void SaveSong()
-        {
-            Console.WriteLine("Saving song "+_songData.Title+ " to file.");
-            _songData.Save();
         }
 
         private void NewSong_Click(object sender)
@@ -155,6 +156,7 @@ namespace Arc.ViewModels
             if (selectedItem != null)
             {
                 selectedItem.Delete();
+                SongLyrics.Clear();
                 Songs.Remove(selectedItem);
                 SongData = null;
             }
@@ -162,23 +164,41 @@ namespace Arc.ViewModels
 
         private void DiscardSong_Click(object sender)
         {
+            IsInEditMode = false;
+
             SongData selectedItem = Songs[Songs.Count - 1];
             SongData = selectedItem;
             selectedItem.Delete();
             Songs.Remove(selectedItem);
             SongData = null;
         }
+
         private void SaveSong_Click(object sender)
         {
             IsInEditMode = false;
 
             SongData lastSong = Songs[Songs.Count - 1];
-
-            Songs.RemoveAt(Songs.Count - 1);
-            Songs.IndexOf(lastSong);
-
             SongData = lastSong;
             lastSong.Save();
+        }
+
+        private void Add_Lyric(object sender)
+        {
+
+            SongData selectedItem = SongData;
+
+            selectedItem.Lyric.Add(
+                    new SongLyric()
+                    {
+                        Text = "New Lyric"
+                    });
+
+            SongLyrics.Clear();
+
+            foreach (SongLyric lyric in selectedItem.Lyric)
+            {
+                SongLyrics.Add(lyric);
+            }
         }
     }
 }
