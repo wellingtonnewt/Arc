@@ -5,26 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Arc.Xml" xmlns:viewmodels="clr-namespace:Arc.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:SongLibraryViewModel}"
         mc:Ignorable="d"
-        Title="SecondaryWindow" Height="450" Width="800">
-    <Grid Background="black">
-        <!-- Lyrics -->
-        <DockPanel LastChildFill="True"
-                     Margin="0 5 5 0">
-            <!-- White Boi -->
-            <Grid Background="#2E2E2E"
-                    DockPanel.Dock="Left"
-                    Width="5"/>
-            <!-- Background -->
-            <Grid Background="#121212">
-                <!-- Lyrics -->
-                <TextBox
-                        IsReadOnly="True"
+        Title="{Binding SongData.Title}"
+        Height="450"
+        Width="800" 
+        WindowStyle="None" 
+        Loaded="Window_Loaded"
+        WindowStartupLocation="Manual">
+    <Grid Background="#121212">
+        <Grid Background="#121212"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center">
+            <!-- Display -->
+            <Viewbox Stretch="Uniform">
+                <TextBox IsReadOnly="True"
                         Name="lyricBox"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center"
                         VerticalContentAlignment="Center"
+                        HorizontalContentAlignment="Center"
                         Background="{x:Null}"
-                        Foreground="#E3E3E3    " 
+                        Foreground="#E3E3E3" 
                         BorderBrush="{x:Null}" 
                         TextWrapping="Wrap"
                         SelectionBrush="#FF235DDA" 
@@ -33,7 +33,7 @@
                         BorderThickness="0"
                         TextAlignment="Center"
                         FontFamily="Roboto Regular"/>
-            </Grid>
-        </DockPanel>
+            </Viewbox>
+        </Grid>
     </Grid>
 </Window>

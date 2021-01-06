@@ -6,6 +6,8 @@ using System.IO;
 using System.Windows;
 using System.Windows.Input;
 using Arc.Helpers;
+using System.Windows.Forms;
+using System.Drawing;
 
 namespace Arc.ViewModels
 {
@@ -117,6 +119,8 @@ namespace Arc.ViewModels
             SecondaryWindow secondWindow = new SecondaryWindow();
             secondWindow.lyricBox.Text = Message;
             secondWindow.Show();
+            
+            
         }
 
         void ProcessDirectory()

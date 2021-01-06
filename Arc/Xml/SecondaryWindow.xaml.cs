@@ -20,20 +20,29 @@ namespace Arc.Xml
     public partial class SecondaryWindow : Window
     {
         private SongLibraryViewModel _viewModel;
+
         public SecondaryWindow()
         {
-            _viewModel = new SongLibraryViewModel();    
-            DataContext = _viewModel;    
+            _viewModel = new SongLibraryViewModel();
+            DataContext = _viewModel;
             InitializeComponent();
 
-            //if (Screen.AllScreens.Length == 1)
-           // {
-              //  Screen screen = Screen.AllScreens[0];
+            Screen s = Screen.AllScreens[1];
 
-             //   System.Drawing.Rectangle r = screen.WorkingArea;
-              //  this.Left = r.Left;
-              //  this.Top = r.Top;
-            //}
+            if (Screen.AllScreens.Length > 1)
+            {
+                System.Drawing.Rectangle r = s.WorkingArea;
+                Top = r.Top;
+                Left = r.Left;
+            }
+
+           // SizeToContent = SizeToContent.WidthAndHeight;
+
+
+        }
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Maximized;
         }
     }
 }
