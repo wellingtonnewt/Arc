@@ -2,6 +2,7 @@
 using Arc.Xml;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -29,18 +30,17 @@ namespace Arc.UserControls
             view.Filter = SongFilter;
         }
 
-        private void lyricChange(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private bool SongFilter(object item)
         {
             if (String.IsNullOrEmpty(songSearch.Text))
                 return true;
+            else if(songSearch.Text.StartsWith("*"))
+                return (item as SongData).Author.Contains(songSearch.Text.Replace("*",""), StringComparison.OrdinalIgnoreCase);
+            else if (songSearch.Text.StartsWith("."))
+                return (item as SongData).Lyric.Any(x => x.Text.Contains(songSearch.Text.Replace(".", ""), StringComparison.OrdinalIgnoreCase));
             else
                 return (item as SongData).Title.Contains(songSearch.Text, StringComparison.OrdinalIgnoreCase);
-        }
+            }
 
         private void songSearchFilter(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {

@@ -188,7 +188,6 @@
                 <!-- Lyrics -->
                 <ListBox ItemsSource="{Binding SongLyrics}"
                          ItemContainerStyle="{StaticResource Lyrics}"
-                         SelectionChanged="lyricChange"
                          BorderBrush="{x:Null}"
                          Background="{x:Null}"
                          Foreground="{x:Null}"
