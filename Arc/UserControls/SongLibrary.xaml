@@ -211,12 +211,14 @@
                                         Margin="-35 0 0 0"
                                         Height="65"
                                         Width="65"
-                                        Content="Eye"/>
+                                        Content="Eye"
+                                        Click="Display"/>
                                 <!-- Background -->
                                 <Grid Background="#121212">
                                     <!-- Lyrics -->
                                     <TextBox Text="{Binding Text}"
                                              IsReadOnly="{Binding DataContext.IsInEditMode, Converter={StaticResource inverter}, RelativeSource={RelativeSource AncestorType=ListBox}}"
+                                             AcceptsReturn="True"
                                              Name="lyricBox"
                                              VerticalAlignment="Stretch"
                                              HorizontalAlignment="Stretch"

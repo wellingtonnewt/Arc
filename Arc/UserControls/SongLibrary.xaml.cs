@@ -70,5 +70,14 @@ namespace Arc.UserControls
             }
            
         }
+        private void Display(object sender, RoutedEventArgs e)
+        {
+            SecondaryWindow secondWindow = new SecondaryWindow();
+            {
+                DataContext = _viewModel;
+            }
+            secondWindow.Show();
+
+        }
     }
 }
