@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Arc.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,8 +19,11 @@ namespace Arc.Xml
     /// </summary>
     public partial class SecondaryWindow : Window
     {
+        private SongLibraryViewModel _viewModel;
         public SecondaryWindow()
         {
+            _viewModel = new SongLibraryViewModel();    
+            DataContext = _viewModel;    
             InitializeComponent();
 
             //if (Screen.AllScreens.Length == 1)

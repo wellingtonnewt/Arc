@@ -17,15 +17,16 @@
             <!-- Background -->
             <Grid Background="#121212">
                 <!-- Lyrics -->
-                <TextBox Text="{Binding SongData.Title}"
+                <TextBox
                         IsReadOnly="True"
                         Name="lyricBox"
-                        VerticalAlignment="Stretch"
-                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
                         VerticalContentAlignment="Center"
                         Background="{x:Null}"
                         Foreground="#E3E3E3    " 
                         BorderBrush="{x:Null}" 
+                        TextWrapping="Wrap"
                         SelectionBrush="#FF235DDA" 
                         SelectionTextBrush="{x:Null}" 
                         FontSize="100"

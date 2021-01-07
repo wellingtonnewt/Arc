@@ -1,9 +1,7 @@
 ﻿using Arc.Xml;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Text;
 using System.IO;
 using System.Windows;
 using System.Windows.Input;
@@ -15,6 +13,8 @@ namespace Arc.ViewModels
     {
 
         private bool _isInEditMode;
+
+        public string lyricToDisplay { get; set; }
 
         public bool IsInEditMode
         {
@@ -62,6 +62,8 @@ namespace Arc.ViewModels
         public ICommand SaveEditClick { get; set; }
         public ICommand DiscardEditClick { get; set; }
 
+        public LyricCommand LyricCommand { get; private set; }
+
         private SongData _songData;
 
         public SongData SongData {
@@ -80,6 +82,7 @@ namespace Arc.ViewModels
 
         public SongLibraryViewModel()
         {
+            LyricCommand = new LyricCommand(Display_Click);
             SongLyrics = new ObservableCollection<SongLyric>();
             Songs = new ObservableCollection<SongData>();
 
@@ -103,6 +106,17 @@ namespace Arc.ViewModels
             SaveEditClick = new RelayCommand(o => SaveEdit_Click(o));
             DiscardEditClick = new RelayCommand(o => DiscardEdit_Click(o));
 
+        }
+        private bool CanExecute(object param)
+        {
+            return true;
+        }
+
+        private void Display_Click(string Message)
+        {
+            SecondaryWindow secondWindow = new SecondaryWindow();
+            secondWindow.lyricBox.Text = Message;
+            secondWindow.Show();
         }
 
         void ProcessDirectory()
