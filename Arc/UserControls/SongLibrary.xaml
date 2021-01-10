@@ -194,13 +194,11 @@
                          VerticalContentAlignment="Center"
                          Margin="43 5 63 0"
                          Style="{StaticResource Lyric}"
-<<<<<<< HEAD
                          SelectionChanged="lyric_SelectionChanged"
-                         Name="songLyrics">
-=======
+                         Name="songLyrics"
                          MinHeight="300"
                          MaxHeight="700">
->>>>>>> Testing
+                    
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <DockPanel LastChildFill="True"
@@ -240,7 +238,6 @@
                                              FontSize="15"
                                              BorderThickness="0"
                                              TextAlignment="Center"
-                                             AcceptsReturn="True"
                                              FontFamily="Roboto Regular"/>
                                 </Grid>
                             </DockPanel>
