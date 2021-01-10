@@ -13,7 +13,6 @@ namespace Arc.ViewModels
 {
     public class SongLibraryViewModel : INotifyPropertyChanged
     {
-
         private bool _isInEditMode;
 
         public string lyricToDisplay { get; set; }
@@ -81,6 +80,7 @@ namespace Arc.ViewModels
         public ObservableCollection<SongData> Songs { get; set; }
 
         public ObservableCollection<SongLyric> SongLyrics { get; set; }
+        public ObservableCollection<SongLyric> prevSongLyric { get; set; }
 
         public SongLibraryViewModel()
         {
@@ -221,23 +221,41 @@ namespace Arc.ViewModels
                 SongLyrics.Add(lyric);
             }
         }
+        public SongData prevSong;
+
         private void Edit_Click(object sender)
         {
+            prevSong = new SongData();
             SongData selectedItem = SongData;
+
             if (selectedItem != null)
             {
                 IsInEditMode = true;
+                prevSong = selectedItem.Clone();
             }
         }
         private void SaveEdit_Click(object sender)
         {
             IsInEditMode = false;
+            prevSong.Delete();
             SongData selectedItem = SongData;
             selectedItem.Save();
         }
         private void DiscardEdit_Click(object sender)
         {
             IsInEditMode = false;
+
+            SongData selectedItem = SongData;
+            selectedItem.Delete();
+
+            SongData = prevSong;
+            SongLyrics.Clear();
+
+            foreach (SongLyric lyric in prevSong.Lyric)
+            {
+                SongLyrics.Add(lyric);
+            }
+            prevSong.Save();
         }
     }
 }

@@ -23,6 +23,20 @@ namespace Arc.Xml
             Tags = new List<string>();
             Lyric = new List<SongLyric>();
         }
+        public SongData Clone()
+        {
+            SongData clone = new SongData();
+            clone.Title = Title;
+            clone.Author = Author;
+            clone.Tags = new List<string>(Tags);
+            clone.Lyric = new List<SongLyric>(Lyric);
+            clone.Lyric.Clear();
+            foreach (SongLyric lyric in Lyric)
+            {
+                clone.Lyric.Add(lyric.Clone());
+            }
+            return clone;
+        }
 
         public void Save()
         {
@@ -66,6 +80,14 @@ namespace Arc.Xml
     {
         public SongLyricType Type { get; set; }
         public string Text { get; set; }
+
+        public SongLyric Clone()
+        {
+            SongLyric clone = new SongLyric();
+            clone.Text = Text;
+            clone.Type = Type;
+            return clone;
+        }
     }
 
     public enum SongLyricType
